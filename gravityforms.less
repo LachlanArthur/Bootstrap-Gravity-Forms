@@ -464,13 +464,43 @@
 			.make-md-column(6);
 		}
 		
-		.name_prefix,
-		.name_suffix {
-			.make-md-column(2);
+		&.has_prefix.has_first_name.has_middle_name.has_last_name.has_suffix {
+			.name_prefix { .make-md-column(2); }
+			.name_first { .make-md-column(3); }
+			.name_middle { .make-md-column(2); }
+			.name_last { .make-md-column(3); }
+			.name_suffix { .make-md-column(2); }
 		}
-		.name_first,
-		.name_last {
-			.make-md-column(4);
+		
+		&.has_prefix.has_first_name.has_middle_name.has_last_name.no_suffix {
+			.name_prefix { .make-md-column(3); }
+			.name_first { .make-md-column(3); }
+			.name_middle { .make-md-column(3); }
+			.name_last { .make-md-column(3); }
+		}
+		
+		&.has_prefix.has_first_name.no_middle_name.has_last_name.has_suffix {
+			.name_prefix { .make-md-column(2); }
+			.name_first { .make-md-column(4); }
+			.name_last { .make-md-column(4); }
+			.name_suffix { .make-md-column(2); }
+		}
+		
+		&.has_prefix.has_first_name.no_middle_name.has_last_name.no_suffix {
+			.name_prefix { .make-md-column(2); }
+			.name_first { .make-md-column(5); }
+			.name_last { .make-md-column(5); }
+		}
+		
+		&.no_prefix.has_first_name.has_middle_name.has_last_name.no_suffix {
+			.name_first { .make-md-column(4); }
+			.name_middle { .make-md-column(4); }
+			.name_last { .make-md-column(4); }
+		}
+		
+		&.no_prefix.has_first_name.no_middle_name.has_last_name.no_suffix {
+			.name_first { .make-md-column(6); }
+			.name_last { .make-md-column(6); }
 		}
 		
 		.gfield_date_month,
