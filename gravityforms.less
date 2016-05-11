@@ -58,7 +58,19 @@
 }
 
 .gform_wrapper {
-
+	
+	.gform_heading {
+		.gform_description {
+			display: block;
+			.alert();
+			.alert-info();
+			
+			&:empty {
+				display: none;
+			}
+		}
+	}
+	
 	ul {
 		.list-unstyled();
 	}
